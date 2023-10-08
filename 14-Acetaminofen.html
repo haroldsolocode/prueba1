@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Detalles del Medicamento - Acetaminofen</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+    <style>
+.logo {
+        max-width: 150px; /* Ajusta el tamaño máximo del logo */
+        margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+      }
+
+
+    </style>
+    <div class="container">
+        <div class="center-align">
+          <img src="imagenes/pastillero3.jpg"  alt="Logo" class="logo" ><div class="right-align">
+            <a href="13-medicamento.html" class=" btn waves-effect waves-light green logout-button" >ATRÁS</a></div></div>
+        </div>
+
+  <div class="container">
+    <h2>Detalles del Medicamento - Acetaminofen</h2>
+    <div class="row">
+      <div class="col s6">
+        <p><strong>Nombre del Medicamento:</strong> Acetaminofen</p>
+        <p><strong>Dosificación:</strong> 500 mg</p>
+        <p><strong>Indicaciones:</strong> Para aliviar el dolor y la fiebre.</p>
+        <p><strong>Vía de Administración:</strong> Oral</p>
+        <p><strong>Presentación:</strong> Tabletas</p>
+        <p><strong>Cantidad/Stock:</strong> 100 unidades</p>
+        <p><strong>Fecha de Vencimiento:</strong> 2024-06-30</p>
+        <p><strong>Contraindicaciones:</strong> Evitar en casos de enfermedad hepática.</p>
+      </div>
+      <div class="col s6 center-align"><br><br><br>
+        <img src="imagenes/medicine_4745342.png" alt="Imagen del Medicamento" width="200">
+      </div>
+    </div>
+
+    <h3>Generar Recordatorio</h3>
+    <form id="reminder-form">
+        <div class="input-field">
+            <label for="nombre-alarma">Nombre del Recordatorio</label>
+            <input type="text" id="nombre-alarma" required>
+          </div>
+          <div class="input-field">
+            <label for="hora">Hora</label>
+            <input type="text" id="hora" class="timepicker" required>
+          </div>
+          <div class="input-field">
+            <label>
+              <input type="checkbox" id="aplazar" />
+              <span>Aplazar Alarma</span>
+    
+            </label><br><br>
+          </div>
+          <div class="input-field">
+            <label for="sonido-alarma">Sonido de Alarma</label><br>
+            <select id="sonido-alarma">
+              <option value="sonido1">Sonido 1</option>
+              <option value="sonido2">Sonido 2</option>
+              <option value="sonido3">Sonido 3</option>
+            </select>
+          </div>
+          <div class="input-field">
+            <label>
+              <input type="checkbox" id="leer-hora" />
+              <span>Leer la Hora en Voz Alta</span>
+            </label><br>
+          </div>
+          <div class="input-field">
+            <label for="repetir-dia">Repetir en Día(s)</label>
+            <input type="number" id="repetir-dia" min="1">
+          </div>
+          <div class="input-field">
+            <label for="dia-semana">Día de la Semana</label><br>
+            <select id="dia-semana">
+              <option value="" disabled selected>Selecciona un día</option>
+              <option value="lunes">Lunes</option>
+              <option value="martes">Martes</option>
+              <option value="miercoles">Miércoles</option>
+              <option value="jueves">Jueves</option>
+              <option value="viernes">Viernes</option>
+              <option value="sabado">Sábado</option>
+              <option value="domingo">Domingo</option>
+              <option value="todos los dias">todos los días</option>
+            </select>
+          </div><br>
+          <div class="back-button center-align">
+          <button type="submit" class="btn waves-effect waves-light green" onclick="M.toast({html: 'Esta en construcción'})">Generar Recordatorio</button>
+        </div>  
+     </form>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      // Código del script
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+      const reminderForm = document.getElementById('reminder-form');
+      const timePicker = document.querySelector('.timepicker');
+      const selectSonido = document.getElementById('sonido-alarma');
+      const selectDiaSemana = document.getElementById('dia-semana');
+      
+      M.Timepicker.init(timePicker, {
+        twelveHour: false // Formato de 24 horas
+      });
+      M.FormSelect.init(selectSonido);
+      M.FormSelect.init(selectDiaSemana);
+
+      reminderForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const selectedTime = timePicker.value;
+        const selectedNombreAlarma = document.getElementById('nombre-alarma').value;
+        const aplazarAlarma = document.getElementById('aplazar').checked;
+        const selectedSonido = selectSonido.value;
+        const leerHora = document.getElementById('leer-hora').checked;
+        const repetirDia = document.getElementById('repetir-dia').value;
+        const selectedDiaSemana = selectDiaSemana.value;
+
+        // Aquí debes agregar la lógica para programar la alarma con los datos seleccionados
+        let alarmMessage = `Alarma programada para ${selectedNombreAlarma} a las ${selectedTime}.`;
+        if (aplazarAlarma) {
+          alarmMessage += ` Se permitirá aplazar.`;
+        }
+        alarmMessage += ` Sonido de alarma: ${selectedSonido}.`;
+        if (leerHora) {
+          alarmMessage += ` Se leerá la hora en voz alta.`;
+        }
+        if (repetirDia) {
+          alarmMessage += ` Se repetirá cada ${repetirDia} día(s).`;
+        } else if (selectedDiaSemana) {
+          alarmMessage += ` Se repetirá los ${selectedDiaSemana}s.`;
+        }
+        alert(alarmMessage);
+      });
+    })
+  </script>
+</body>
+</html>
+
+
+   

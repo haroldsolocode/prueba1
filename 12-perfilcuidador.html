@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Pastillero Virtual - cuidador</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <style>
+    /* ... (otros estilos) ... */
+    
+    
+    h2  {
+      font-size: 70px;
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+    }
+    /* ... (boton crear pacientes) ... */
+    .center-content {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     height: 35vh;
+    }
+    
+    
+    .logo-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      max-width: 350px;
+      margin-top: 20px;
+    }
+    
+    .logout-button {
+      background-color: green;
+      color: white;
+    }
+    
+    .profile-buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      padding: 10px 0;
+    }
+    
+    .profile-button {
+      color: white;
+      margin: 0 10px;
+    }
+    
+    /* ... (otros estilos) ... */
+    
+    .green-divider {
+      width: 100%;
+      height: 100px;
+      background-color: #00BF63;
+      display: flex;
+      align-items: center;
+    }
+    
+    .divider-image {
+      max-width: 100px;
+      height: auto;
+      margin-left: 20px; /* Ajusta el margen izquierdo de la imagen */
+    }
+    
+    .divider-message {
+      font-size: 24px;
+      color: white;
+      margin-left: 40px; /* Ajusta el margen izquierdo del mensaje */
+    }
+    
+    .profile-category-buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      padding: 20px 0;
+    }
+    
+    .profile-category-button {
+      color: black;
+      background-color: #f2f6f4;
+      text-align: center;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 16px;
+      flex: 1; /* Distribuye el espacio de manera uniforme */
+      border-radius: 50%; /* Para hacer los botones ovalados */
+      max-width: 180px; /* Ajusta el ancho máximo de los botones */
+      overflow: hidden; /* Para que el contenido no se desborde */
+    }
+
+    .profile-button-image {
+      max-width: 100px; /* Ajusta el tamaño máximo de la imagen */
+      height: auto; /* Ajusta la altura proporcionalmente */
+      margin-bottom: 10px; /* Agrega un margen inferior a la imagen */
+    }
+    .search-bar {
+  margin-top: 10px;
+  display: flex;
+  
+}
+
+#search {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #00BF63;
+  border-radius: 5px;
+}
+
+
+  </style>
+</head>
+<body>
+ 
+  <div class="container">
+    <div class="logo-container">
+      <img src="imagenes/pastilleroVirtualrecortado.jpeg" alt="Logo" class="logo">
+      <a href="1-index.html" class="btn waves-effect waves-light green logout-button">Cerrar Sesión</a>
+    </div>
+    
+    <div class="profile-buttons">
+      <a href="2-mision.html" class="btn profile-button">Misión</a>
+      <a href="3-vision.html" class="btn profile-button">Visión</a>
+      <a href="4-contacto.html" class="btn profile-button">Contacto</a>
+      <a href="5-ayuda.html" class="btn profile-button">Ayuda</a>
+      <a href="6-blog.html" class="btn profile-button">Blog</a>
+    </div>
+    
+    <div class="green-divider">
+      <img src="imagenes/cuidador2.png" alt="Imagen en franja verde" class="divider-image">
+      <div class="divider-message">¡Hola, Cuidador [Nombre del Cuidador]!  
+        Simplifica el seguimiento de tratamientos y cuidados para tus seres queridos o pacientes.
+         ¡Cuidar es más fácil con nosotros!</div>
+    </div><br><br>
+    <h2>Buscar paciente</h2>
+    <div class="search-bar">
+      <form action="#" method="GET"> <!-- Replace "#" with the appropriate action URL -->
+        <input type="text" id="search" name="search" placeholder="Buscar pacientes...">
+        <button type="submit" class="btn waves-effect waves-light green">Buscar</button>
+      </form>
+    </div><br><br>
+        
+    <div class="profile-category-buttons center-content"> <!-- Agrega la clase "center-content" aquí -->
+      <div class="col s12">
+        <a href="16-registrarpaciente.html" class="profile-category-button">
+          <img src="imagenes/agregar.png" alt="Imagen 4" class="profile-button-image">
+          <span style="font-size: 20px;" >Generar paciente</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="back-button center-align">
+      <a href="9-bienvenida.html" class="waves-effect waves-light btn green" >Atrás</a>
+    </div><br><br>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

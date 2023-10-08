@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pastillero Virtual - Bienvenida</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <style>
+      h1,
+      h2 {
+        font-size: 70px;
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .logo {
+        max-width: 350px;
+        margin-top: 20px;
+      }
+      .profile-buttons {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+        padding: 10px 0;
+      }
+      .profile-button {
+        color: white;
+      }
+      .profile-images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+      .profile-image {
+        max-width: 30%;
+        margin: 20px;
+        text-align: center;
+        position: relative;
+      }
+      .profile-image img {
+        display: block;
+        margin: 0 auto;
+        max-width: 60%; /* Ajusta el tamaño de la imagen */
+        height: auto; /* Ajusta la altura proporcionalmente */
+      }
+      .back-button {
+        margin-top: 40px;
+        text-align: center;
+      }
+      
+      .green-divider {
+        width: 100%;
+        height: 100px;
+        background-color:#00BF63 ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .divider-message {
+        font-size: 18px;
+        color: white;
+      }
+      .profile-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 20px;
+      }
+      .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+      .logout-button {
+        background-color: #00ff00;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img src="imagenes/pastilleroVirtualrecortado.jpeg" alt="Logo" />
+      </div>
+
+      <div class="profile-buttons">
+        <a href="2-mision.html" class="btn profile-button">Misión</a>
+        <a href="3-vision.html" class="btn profile-button">Visión</a>
+        <a href="4-contacto.html" class="btn profile-button">Contacto</a>
+        <a href="5-ayuda.html" class="btn profile-button">Ayuda</a>
+        <a href="6-blog.html" class="btn profile-button">Blog</a>
+      </div>
+
+      <div class="green-divider">
+        <div class="divider-message" style=" font-size: 30px;"  >"¿Cómo usarás la app? Perfil: Paciente o Cuidador"</div>
+      </div><br><br>
+
+      <h2>Perfil</h2>
+
+      <div class="profile-content">
+        <div class="profile-images">
+          <div class="profile-image">
+            <img src="imagenes/paciente2.png" alt="Paciente" />
+            <a
+              href="10-perfilpaciente.html"
+              class="btn waves-effect waves-light"
+              onclick="M.toast({html: 'Esta en construcción'})"
+              >Paciente</a
+            >
+          </div>
+          <div class="profile-image">
+            <img src="imagenes/cuidador2.png" alt="Cuidador" />
+            <a
+              href="12-perfilcuidador.html"
+              class="btn waves-effect waves-light"
+              onclick="M.toast({html: 'Esta en construcción'})"
+              >Cuidador</a
+            >
+          </div>
+        </div>
+
+        <div class="button-container">
+          <a
+            href="1-index.html"
+            class="waves-effect waves-light btn green"
+            >Cerrar Sesión</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
+</html>
